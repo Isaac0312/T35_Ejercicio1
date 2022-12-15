@@ -1,0 +1,53 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<router-outlet></router-outlet>
+
+<div class="container">
+  <h1>Alta cliente</h1>
+  <div class="row">
+    <div class="col">
+        Nombre:
+          <input class="inputs" [(ngModel)]="nombre">
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col">
+        CIF:
+          <input class="inputs" [(ngModel)]="CIF">
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col">
+        Dirección:
+          <input class="inputs" [(ngModel)]="direccion">
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col">
+        Grupo:
+          <div class="form-group">
+            <label for="exampleFormControlSelect1"></label>
+            <select class="form-control" id="exampleFormControlSelect1" [(ngModel)]="grupo">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+    </div>
+    <br>
+    <button (click)="guardar()" style="text-align: center; width:50%;">Guardar</button>
+    <p><strong>Listado clientes</strong></p>
+    <app-lista-clientes [cliente]="clientes"></app-lista-clientes>
+  </div>
+</div>
